@@ -19,6 +19,28 @@ module.exports = merge(common, {
       set favicon(value) {
         this._favicon = value;
       },
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/french.html',
+      filename:'french.html',
+      _favicon: './src/assets/favicon.png',
+      get favicon() {
+        return this._favicon;
+      },
+      set favicon(value) {
+        this._favicon = value;
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/english.html',
+      filename:'english.html',
+      _favicon: './src/assets/favicon.png',
+      get favicon() {
+        return this._favicon;
+      },
+      set favicon(value) {
+        this._favicon = value;
+      },
     })
   ],
   module: {
