@@ -31,6 +31,36 @@ module.exports = merge(common, {
           collapseWhitespace: true,
           removeComments: true
         }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/french.html',
+        _favicon: './src/assets/favicon.png',
+        get favicon() {
+          return this._favicon;
+        },
+        set favicon(value) {
+          this._favicon = value;
+        },
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/english.html',
+        _favicon: './src/assets/favicon.png',
+        get favicon() {
+          return this._favicon;
+        },
+        set favicon(value) {
+          this._favicon = value;
+        },
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
       })
     ]
   },
